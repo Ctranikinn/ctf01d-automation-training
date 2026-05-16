@@ -6,7 +6,7 @@ COPY . /root/ctf01d-automation-training
 WORKDIR /root/ctf01d-automation-training
 RUN ./build_simple.sh
 
-FROM sea5kg/ctf01d-automation-training:2026-04-30-release-environment
+FROM sea5kg/ctf01d-automation-training:2026-05-16-release-environment
 
 LABEL "maintainer"="Evgenii Sopov <mrseakg@gmail.com>"
 LABEL "repository"="https://github.com/sea5kg/ctf01d-automation-training"
