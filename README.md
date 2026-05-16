@@ -7,13 +7,13 @@
 Build environment (change the date)
 
 ```
-docker build -t sea5kg/ctf01d-automation-training-build-environment:2026-04-30 -f Dockerfile.build-environment .
+docker build -t sea5kg/ctf01d-automation-training:2026-05-16-build-environment -f Dockerfile.build-environment .
 ```
 
 Release environment (change the date)
 
 ```
-docker build -t sea5kg/ctf01d-automation-training-release-environment:2026-04-30 -f Dockerfile.release-environment .
+docker build -t sea5kg/ctf01d-automation-training:2026-05-16-release-environment -f Dockerfile.release-environment .
 ```
 
 Build image
