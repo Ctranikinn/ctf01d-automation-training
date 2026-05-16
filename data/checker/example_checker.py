@@ -154,14 +154,14 @@ def check_flag(_host, _flag_id, _flag_value):
 if len(sys.argv) < 5:
     sys.exit(f'Usage: {sys.argv[0]} (PUT|CHECK) <host> <id> <flag>')
 
-command = sys.argv[1]
-host = sys.argv[2]
+host = sys.argv[1]
+command = sys.argv[2].lower()
 flag_id = sys.argv[3]
 flag_value = sys.argv[4]
 
-if command == "PUT":
+if command == "put":
     put_flag(host, flag_id, flag_value)
-elif command == "CHECK":
+elif command == "check":
     check_flag(host, flag_id, flag_value)
 else:
     sys.exit("Unknown command '" + command + "'")

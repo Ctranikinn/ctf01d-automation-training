@@ -106,19 +106,19 @@ void EmployFlags::runThreadSendFlags() {
         ctx.work_dir = config->getCheckerWorkDir();
         ctx.app_name = config->getCheckerScriptPath();
         ctx.timeout_ms = config->getCheckerScriptWaitInSec() * 1000;
-        ctx.args.push_back("PUT");
         ctx.args.push_back(config->getCheckerTargetHost());
+        ctx.args.push_back("put");
         ctx.args.push_back(new_flag.getId());
         ctx.args.push_back(new_flag.getValue());
 
         // run put flag
         runner->runCommand(ctx);
-        WsjcppLog::warn(TAG, "runThreadSendFlags - TODO process errors on PUT " + new_flag.getValue());
+        WsjcppLog::warn(TAG, "runThreadSendFlags - TODO process errors on 'put' " + new_flag.getValue());
 
         // run get flag
-        ctx.args[0] = "GET";
+        ctx.args[1] = "check";
         runner->runCommand(ctx);
-        WsjcppLog::warn(TAG, "runThreadSendFlags - TODO process errors on GET " + new_flag.getValue());
+        WsjcppLog::warn(TAG, "runThreadSendFlags - TODO process errors on 'check' " + new_flag.getValue());
 
         // caching previously flag lives
         {
