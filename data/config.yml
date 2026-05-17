@@ -1,4 +1,4 @@
-web-port: 10551
+web-port: 10552
 web-dir: ../www
 
 log-dir: ./logs
